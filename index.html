@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>페이지와 두두의 책방 | 책장을 넘기면, 상상력이 자라는 작은 세상</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Noto Serif KR (감성적인 제목용) & Noto Sans KR (가독성 좋은 본문용) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Noto Serif KR"', 'serif'],
+                        sans: ['"Noto Sans KR"', 'sans-serif'],
+                    },
+                    colors: {
+                        beige: {
+                            50: '#FDFBF7',
+                            100: '#FAF6F0',
+                            200: '#F3ECE1',
+                            300: '#E6DAC8',
+                            400: '#D4C1A7',
+                            500: '#B59B7C',
+                            600: '#8C6D53',
+                            700: '#6B513C',
+                            800: '#4A3728',
+                            900: '#36271C',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-beige-100 text-beige-900 font-sans antialiased selection:bg-beige-300 selection:text-beige-900">
+
+    <!-- 상단 내비게이션 바 -->
+    <header class="sticky top-0 z-40 bg-beige-100/90 backdrop-blur-md border-b border-beige-200">
+        <div class="max-w-4xl mx-auto px-5 h-16 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2 group">
+                <span class="text-xl" aria-hidden="true">📚</span>
+                <span class="font-serif font-bold text-lg sm:text-xl text-beige-900 tracking-tight group-hover:text-beige-600 transition-colors">
+                    페이지와 두두의 책방
+                </span>
+            </a>
+            <nav class="hidden sm:flex items-center gap-6 text-sm font-medium text-beige-700">
+                <a href="#about" class="hover:text-beige-900 transition-colors">책방 소개</a>
+                <a href="#services" class="hover:text-beige-900 transition-colors">주요 프로그램</a>
+                <a href="#event" class="hover:text-beige-900 transition-colors">무료 체험 안내</a>
+                <a href="#inquiry" class="px-4 py-2 rounded-full bg-beige-600 text-white hover:bg-beige-700 transition-colors shadow-sm">
+                    문의하기
+                </a>
+            </nav>
+            <!-- 모바일용 빠른 문의 이동 링크 -->
+            <a href="#inquiry" class="sm:hidden text-xs font-medium px-3.5 py-2 rounded-full bg-beige-600 text-white active:scale-95 transition-transform">
+                문의하기
+            </a>
+        </div>
+    </header>
+
+    <!-- 메인 히어로 섹션 (상호명 및 소개) -->
+    <section id="about" class="relative overflow-hidden pt-12 pb-16 sm:pt-20 sm:pb-24 px-5">
+        <!-- 배경 은은한 장식 원 -->
+        <div class="absolute -top-24 -right-24 w-72 h-72 rounded-full bg-beige-200/70 blur-3xl pointer-events-none"></div>
+        <div class="absolute top-40 -left-24 w-64 h-64 rounded-full bg-beige-300/40 blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-3xl mx-auto text-center relative z-10">
+            <!-- 업종 뱃지 -->
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-beige-200 text-beige-700 text-xs sm:text-sm font-medium mb-6 shadow-xs">
+                <span>책카페 · 복합문화공간</span>
+            </div>
+
+            <!-- 상호명 -->
+            <h1 class="font-serif text-3xl sm:text-5xl font-bold text-beige-900 leading-tight mb-5 tracking-tight">
+                페이지와 두두의 책방
+            </h1>
+
+            <!-- 메인 슬로건 -->
+            <p class="font-serif text-lg sm:text-2xl text-beige-600 font-medium mb-8 leading-relaxed">
+                “책장을 넘기면, 상상력이 자라는 작은 세상”
+            </p>
+
+            <!-- 책방 소개 카드 -->
+            <div class="bg-beige-50 border border-beige-200 rounded-3xl p-6 sm:p-9 shadow-sm max-w-2xl mx-auto">
+                <p class="text-beige-800 text-base sm:text-lg leading-relaxed break-keep">
+                    책과 차를 즐기는 포근한 <strong class="font-semibold text-beige-900">북카페</strong>이자<br class="hidden sm:inline">
+                    아이와 함께하는 <strong class="font-semibold text-beige-900">동화책 제작 체험</strong>, 취향을 담은 <strong class="font-semibold text-beige-900">도서 구매</strong>,<br class="hidden sm:inline">
+                    마음을 전하는 <strong class="font-semibold text-beige-900">특별한 책 선물 포장</strong>이 가능한 복합문화공간입니다.
+                </p>
+
+                <!-- 감성 아이콘 일러스트 요약 -->
+                <div class="grid grid-cols-3 gap-3 mt-7 pt-6 border-t border-beige-200/80 text-center">
+                    <div class="flex flex-col items-center gap-1.5">
+                        <div class="w-11 h-11 rounded-2xl bg-beige-200/70 flex items-center justify-center text-beige-700">
+                            <!-- 찻잔 SVG -->
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M18 8h1a4 4 0 010 8h-1M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8zm4-4v2m4-2v2m4-2v2"/>
+                            </svg>
+                        </div>
+                        <span class="text-xs sm:text-sm font-medium text-beige-800">향긋한 차와 휴식</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-1.5">
+                        <div class="w-11 h-11 rounded-2xl bg-beige-200/70 flex items-center justify-center text-beige-700">
+                            <!-- 책 SVG -->
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                            </svg>
+                        </div>
+                        <span class="text-xs sm:text-sm font-medium text-beige-800">동화책 창작 체험</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-1.5">
+                        <div class="w-11 h-11 rounded-2xl bg-beige-200/70 flex items-center justify-center text-beige-700">
+                            <!-- 선물 SVG -->
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 11.25v8.25a1.5 1.5 0 01-1.5 1.5H5.25a1.5 1.5 0 01-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 109.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1114.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z"/>
+                            </svg>
+                        </div>
+                        <span class="text-xs sm:text-sm font-medium text-beige-800">감성 책 선물 포장</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 대표 상품 및 서비스 섹션 -->
+    <section id="services" class="py-14 sm:py-20 px-5 bg-beige-50 border-y border-beige-200">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-10 sm:mb-14">
+                <span class="text-xs font-semibold tracking-widest uppercase text-beige-500 block mb-2">OUR SERVICES</span>
+                <h2 class="font-serif text-2xl sm:text-3xl font-bold text-beige-900">
+                    책방에서 만나는 특별한 경험
+                </h2>
+                <p class="text-sm sm:text-base text-beige-700 mt-2.5">
+                    페이지와 두두의 책방이 준비한 다섯 가지 이야기 공간입니다.
+                </p>
+            </div>
+
+            <!-- 서비스 카드 그리드 (모바일 1열, 태블릿/데스크탑 2열 및 마지막 강조 배치) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
+                <!-- 1. 나만의 동화책 만들기 -->
+                <article class="bg-beige-100 rounded-3xl p-6 sm:p-7 border border-beige-200/90 hover:border-beige-400 transition-all shadow-xs flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-beige-200 text-beige-800 flex items-center justify-center text-2xl mb-4">
+                            🎨
+                        </div>
+                        <div class="flex items-center gap-2 mb-2">
+                            <h3 class="font-serif text-lg sm:text-xl font-bold text-beige-900">나만의 동화책 만들기</h3>
+                            <span class="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-beige-600 text-white">인기 체험</span>
+                        </div>
+                        <p class="text-beige-700 text-sm sm:text-base leading-relaxed break-keep">
+                            아이와 부모가 함께 이야기를 만들고 세상에 단 하나뿐인 동화책을 직접 제작하는 특별한 창작 체험입니다.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- 2. 감성 북카페 -->
+                <article class="bg-beige-100 rounded-3xl p-6 sm:p-7 border border-beige-200/90 hover:border-beige-400 transition-all shadow-xs flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-beige-200 text-beige-800 flex items-center justify-center text-2xl mb-4">
+                            ☕
+                        </div>
+                        <h3 class="font-serif text-lg sm:text-xl font-bold text-beige-900 mb-2">감성 북카페</h3>
+                        <p class="text-beige-700 text-sm sm:text-base leading-relaxed break-keep">
+                            따뜻하고 향긋한 차 한 잔과 함께 책장을 넘기며 온전한 쉼과 여유를 즐길 수 있는 포근한 공간입니다.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- 3. 큐레이션 서점 -->
+                <article class="bg-beige-100 rounded-3xl p-6 sm:p-7 border border-beige-200/90 hover:border-beige-400 transition-all shadow-xs flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-beige-200 text-beige-800 flex items-center justify-center text-2xl mb-4">
+                            📖
+                        </div>
+                        <h3 class="font-serif text-lg sm:text-xl font-bold text-beige-900 mb-2">큐레이션 서점</h3>
+                        <p class="text-beige-700 text-sm sm:text-base leading-relaxed break-keep">
+                            아이들의 상상력을 깨우는 그림책, 동화책부터 어른들의 마음을 위로하는 책까지 취향에 맞는 도서를 엄선해 판매합니다.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- 4. 책 선물 패키지 -->
+                <article class="bg-beige-100 rounded-3xl p-6 sm:p-7 border border-beige-200/90 hover:border-beige-400 transition-all shadow-xs flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-beige-200 text-beige-800 flex items-center justify-center text-2xl mb-4">
+                            💐
+                        </div>
+                        <h3 class="font-serif text-lg sm:text-xl font-bold text-beige-900 mb-2">책 선물 패키지</h3>
+                        <p class="text-beige-700 text-sm sm:text-base leading-relaxed break-keep">
+                            소중한 사람에게 건네는 책에 드라이플라워, 따뜻한 손편지, 아기자기한 문구 소품을 더한 정성 가득한 선물 포장 서비스입니다.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- 5. 가족 독서·창작 프로그램 (전체 너비 강조 카드) -->
+                <article class="md:col-span-2 bg-beige-200/60 rounded-3xl p-6 sm:p-8 border border-beige-300/80 hover:border-beige-400 transition-all shadow-xs">
+                    <div class="flex flex-col sm:flex-row sm:items-center gap-5">
+                        <div class="w-14 h-14 shrink-0 rounded-2xl bg-beige-50 text-beige-800 flex items-center justify-center text-3xl shadow-2xs">
+                            👨‍👩‍👧‍👦
+                        </div>
+                        <div>
+                            <h3 class="font-serif text-lg sm:text-xl font-bold text-beige-900 mb-1.5">
+                                가족 독서·창작 프로그램
+                            </h3>
+                            <p class="text-beige-800 text-sm sm:text-base leading-relaxed break-keep">
+                                부모와 아이가 함께 책을 읽고 깊은 대화를 나누며 새로운 이야기를 창작해 보는 소중한 가족 문화 체험 프로그램입니다.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 주요 이벤트 및 안내 섹션 -->
+    <section id="event" class="py-14 sm:py-20 px-5">
+        <div class="max-w-3xl mx-auto">
+            <div class="bg-gradient-to-br from-beige-200 to-beige-300/70 rounded-3xl p-7 sm:p-10 border border-beige-300 shadow-sm text-center relative overflow-hidden">
+                <div class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-beige-50 text-beige-700 text-xs font-bold mb-4 shadow-2xs">
+                    <span>✨ EVENT & NOTICE</span>
+                </div>
+                <h2 class="font-serif text-2xl sm:text-3xl font-bold text-beige-900 mb-3">
+                    정기 무료 체험 클래스 운영
+                </h2>
+                <p class="text-beige-800 text-base sm:text-lg mb-6 break-keep">
+                    책방의 따뜻한 분위기와 창작의 즐거움을 미리 경험해 보세요.
+                </p>
+
+                <!-- 일정 강조 박스 -->
+                <div class="inline-flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 bg-beige-50/95 px-6 py-4 rounded-2xl border border-beige-300 shadow-2xs">
+                    <span class="text-sm font-semibold text-beige-600">운영 일시</span>
+                    <span class="hidden sm:inline text-beige-300">|</span>
+                    <span class="font-serif text-lg sm:text-xl font-bold text-beige-900">
+                        매주 토요일 오후 2시
+                    </span>
+                </div>
+
+                <p class="text-xs sm:text-sm text-beige-700 mt-5">
+                    * 클래스 참여 및 예약 안내는 아래 인스타그램 채널을 통해 편하게 문의해 주세요.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 하단 푸터 및 문의 버튼 섹션 -->
+    <footer id="inquiry" class="bg-beige-900 text-beige-100 pt-14 pb-28 sm:pb-16 px-5">
+        <div class="max-w-3xl mx-auto text-center">
+            <div class="mb-8">
+                <span class="text-2xl mb-2 block" aria-hidden="true">📚</span>
+                <h2 class="font-serif text-2xl sm:text-3xl font-bold text-beige-50 mb-2">
+                    페이지와 두두의 책방
+                </h2>
+                <p class="text-beige-300 text-sm sm:text-base">
+                    책장을 넘기면, 상상력이 자라는 작은 세상
+                </p>
+            </div>
+
+            <!-- 문의 안내 카드 -->
+            <div class="bg-beige-800/80 border border-beige-700 rounded-3xl p-6 sm:p-8 mb-8">
+                <p class="text-beige-200 text-sm sm:text-base mb-5 break-keep">
+                    도서 문의, 책 선물 포장 예약, 토요일 무료 체험 클래스 신청 등<br class="hidden sm:inline">
+                    궁금하신 점은 언제든 인스타그램 DM으로 문의해 주세요!
+                </p>
+
+                <!-- 메인 문의 버튼 그룹 -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+                    <!-- 인스타그램 바로가기 문의 버튼 -->
+                    <a href="https://www.instagram.com/hugchoco/" target="_blank" rel="noopener noreferrer"
+                       class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-2xl bg-beige-500 hover:bg-beige-400 text-beige-900 font-bold text-base transition-all shadow-md active:scale-98">
+                        <!-- 인스타그램 아이콘 SVG -->
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" />
+                        </svg>
+                        <span>인스타그램 문의하기 (@hugchoco)</span>
+                    </a>
+
+                    <!-- 아이디 복사 버튼 -->
+                    <button type="button" onclick="copyInstagramId()"
+                            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-4 rounded-2xl bg-beige-700 hover:bg-beige-600 text-beige-100 font-medium text-sm sm:text-base transition-colors cursor-pointer">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                        </svg>
+                        <span>아이디 복사</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 기본 정보 요약 -->
+            <div class="text-xs sm:text-sm text-beige-400 space-y-1.5">
+                <p>상호명: 페이지와 두두의 책방 &nbsp;|&nbsp; 업종: 책카페 (복합문화공간)</p>
+                <p>문의 채널: 인스타그램 @hugchoco</p>
+                <p class="pt-3 text-beige-500 text-xs">© 페이지와 두두의 책방. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 모바일 하단 고정 문의 버튼 바 (스크롤 시 언제든 편하게 누를 수 있도록 배치) -->
+    <div class="sm:hidden fixed bottom-0 left-0 right-0 z-40 p-3 bg-beige-100/95 backdrop-blur-md border-t border-beige-200 shadow-lg">
+        <a href="https://www.instagram.com/hugchoco/" target="_blank" rel="noopener noreferrer"
+           class="w-full flex items-center justify-center gap-2 py-3.5 px-5 rounded-2xl bg-beige-600 active:bg-beige-700 text-white font-bold text-base shadow-sm transition-colors">
+            <span>💬 인스타그램으로 문의하기 (@hugchoco)</span>
+        </a>
+    </div>
+
+    <!-- 복사 완료 토스트 메시지 박스 -->
+    <div id="toast" class="fixed bottom-20 sm:bottom-8 left-1/2 -translate-x-1/2 z-50 px-5 py-3 rounded-full bg-beige-900 text-beige-50 text-sm font-medium shadow-lg border border-beige-700 opacity-0 pointer-events-none transition-opacity duration-300">
+        인스타그램 아이디(@hugchoco)가 복사되었습니다!
+    </div>
+
+    <!-- 복사 기능 스크립트 -->
+    <script>
+        function copyInstagramId() {
+            const textToCopy = '@hugchoco';
+            const tempInput = document.createElement('input');
+            tempInput.value = textToCopy;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            tempInput.setSelectionRange(0, 99999);
+
+            try {
+                document.execCommand('copy');
+                showToast();
+            } catch (err) {
+                console.error('복사 실패:', err);
+            }
+
+            document.body.removeChild(tempInput);
+        }
+
+        function showToast() {
+            const toast = document.getElementById('toast');
+            toast.classList.remove('opacity-0');
+            toast.classList.add('opacity-100');
+
+            setTimeout(() => {
+                toast.classList.remove('opacity-100');
+                toast.classList.add('opacity-0');
+            }, 2500);
+        }
+    </script>
+</body>
+</html>
